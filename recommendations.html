@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My favorite movies, shows, and food recommendations">
+    <title>✨ Movie & Food Recommendations - Strawberry Matcha Dreams ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TOP NAVIGATION MENU -->
+    <nav class="top-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="aboutme.html">🌙 About Me</a>
+        <a href="social.html">📱 Social</a>
+        <a href="study.html">📚 Study</a>
+        <a href="hobby.html">🎨 Hobby</a>
+        <a href="recommendations.html">🎬 Movie & Food</a>
+    </nav>
+
+    <!-- NEXT BUTTON (TOP RIGHT) -->
+    <div class="next-btn-container">
+        <button class="next-btn" onclick="goToNextPage()">Next →</button>
+    </div>
+
+    <!-- SCROLL ARROWS -->
+    <div class="scroll-arrows">
+        <button class="arrow-btn" onclick="scrollUp()">↑</button>
+        <button class="arrow-btn" onclick="scrollDown()">↓</button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-container">
+        <div class="hero-section">
+            <h1 class="page-title">🎬🍜 Recommendations 🍜🎬</h1>
+            
+            <!-- CONTENT BOX -->
+            <div class="content-box">
+                <h2>My Favorite Things! 💕</h2>
+                <p>
+                    Welcome to my recommendation corner! Here I share all my favorite movies, 
+                    TV shows, anime, and food spots. These are things I absolutely love and 
+                    think you should experience too! Whether you're looking for your next 
+                    binge-watch or a new restaurant to try, I've got you covered!
+                </p>
+            </div>
+        </div>
+
+        <!-- MOVIE SECTION -->
+        <div class="content-box">
+            <h2>🎬 Movies & Shows I Love</h2>
+            <p>
+                I'm a huge fan of [your favorite genres]! Here are some of my all-time favorites 
+                that I think everyone should watch at least once.
+            </p>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <h3>🎥 Favorite Movies</h3>
+                <p>
+                    <strong>Top Picks:</strong>
+                </p>
+                <ul>
+                    <li>[Movie 1] - [Why you love it]</li>
+                    <li>[Movie 2] - [Why you love it]</li>
+                    <li>[Movie 3] - [Why you love it]</li>
+                    <li>[Movie 4] - [Why you love it]</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>📺 TV Shows</h3>
+                <p>
+                    <strong>Currently Watching:</strong>
+                </p>
+                <ul>
+                    <li>[Show 1] - [What you think]</li>
+                    <li>[Show 2] - [What you think]</li>
+                </ul>
+                <p>
+                    <strong>All-Time Favorites:</strong>
+                </p>
+                <ul>
+                    <li>[Show 3] - Must watch!</li>
+                    <li>[Show 4] - Obsessed!</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🎌 Anime</h3>
+                <p>
+                    <strong>Recommendations:</strong>
+                </p>
+                <ul>
+                    <li>[Anime 1] - [Your rating/thoughts]</li>
+                    <li>[Anime 2] - [Your rating/thoughts]</li>
+                    <li>[Anime 3] - [Your rating/thoughts]</li>
+                </ul>
+                <p>Genre I love: [Your favorite anime genres]</p>
+            </div>
+
+            <div class="content-card">
+                <h3>🎭 By Genre</h3>
+                <p>
+                    <strong>Romance:</strong> [Movie/show name]<br>
+                    <strong>Comedy:</strong> [Movie/show name]<br>
+                    <strong>Thriller:</strong> [Movie/show name]<br>
+                    <strong>Fantasy:</strong> [Movie/show name]<br>
+                    <strong>Drama:</strong> [Movie/show name]
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h3>🍿 Movie Night Vibes</h3>
+                <p>
+                    Perfect for when you want to:
+                </p>
+                <ul>
+                    <li>😊 Feel Good: [Movie name]</li>
+                    <li>😭 Cry: [Movie name]</li>
+                    <li>😱 Get Scared: [Movie name]</li>
+                    <li>🤔 Think Deep: [Movie name]</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>✨ Hidden Gems</h3>
+                <p>
+                    Underrated movies/shows you need to watch:
+                </p>
+                <ul>
+                    <li>[Hidden gem 1]</li>
+                    <li>[Hidden gem 2]</li>
+                    <li>[Hidden gem 3]</li>
+                </ul>
+                <p>Trust me, you'll thank me later! 💕</p>
+            </div>
+        </div>
+
+        <!-- FOOD SECTION -->
+        <div class="content-box">
+            <h2>🍜 Food Recommendations</h2>
+            <p>
+                Food is one of my favorite things in life! Here are my go-to spots, 
+                favorite dishes, and must-try food experiences. Get ready to add to your 
+                foodie bucket list!
+            </p>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <h3>🍽️ Favorite Restaurants</h3>
+                <p>
+                    <strong>[Restaurant Name 1]</strong><br>
+                    Must-try: [Dish name]<br>
+                    Vibe: [Cozy/fancy/casual/etc.]
+                </p>
+                <p>
+                    <strong>[Restaurant Name 2]</strong><br>
+                    Must-try: [Dish name]<br>
+                    Perfect for: [Occasion]
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h3>☕ Cafes & Coffee</h3>
+                <p>
+                    <strong>[Cafe Name 1]</strong><br>
+                    Order this: [Drink/food]<br>
+                    Why I love it: [Reason]
+                </p>
+                <p>
+                    <strong>[Cafe Name 2]</strong><br>
+                    Aesthetic: ⭐⭐⭐⭐⭐<br>
+                    Perfect for: [Study/hangout/dates]
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h3>🍰 Desserts</h3>
+                <p>
+                    I have the biggest sweet tooth! Must-tries:
+                </p>
+                <ul>
+                    <li>[Dessert 1] from [Place]</li>
+                    <li>[Dessert 2] from [Place]</li>
+                    <li>[Dessert 3] from [Place]</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🌮 Street Food</h3>
+                <p>
+                    Best street food spots:
+                </p>
+                <ul>
+                    <li>[Food item] at [Location]</li>
+                    <li>[Food item] at [Location]</li>
+                    <li>[Food item] at [Location]</li>
+                </ul>
+                <p>Affordable and delicious! 😋</p>
+            </div>
+
+            <div class="content-card">
+                <h3>🥘 By Cuisine</h3>
+                <p>
+                    <strong>Japanese:</strong> [Restaurant]<br>
+                    <strong>Korean:</strong> [Restaurant]<br>
+                    <strong>Italian:</strong> [Restaurant]<br>
+                    <strong>Chinese:</strong> [Restaurant]<br>
+                    <strong>Mexican:</strong> [Restaurant]
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h3>🏠 Homemade Faves</h3>
+                <p>
+                    Recipes I love to make:
+                </p>
+                <ul>
+                    <li>[Dish 1] - Easy & yummy!</li>
+                    <li>[Dish 2] - Comfort food ❤️</li>
+                    <li>[Dish 3] - Party favorite!</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FINAL THOUGHTS -->
+        <div class="content-box">
+            <h2>💕 Final Thoughts</h2>
+            <p>
+                These recommendations come straight from my heart! I've personally watched 
+                every movie and tried every food spot listed here. Everyone has different 
+                tastes, but I hope you find something you love from this list!
+            </p>
+            <p>
+                If you try any of these recommendations, I'd love to hear what you think! 
+                Feel free to reach out and share your thoughts. And if you have recommendations 
+                for me, I'm always looking for new things to watch and eat! 🌟
+            </p>
+            <p>
+                Happy watching and eating! ✨🍿🍜
+            </p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
