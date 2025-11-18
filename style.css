@@ -1,0 +1,652 @@
+/* ============================================
+   STRAWBERRY MATCHA WEBSITE - MAIN STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffb3d9 0%, #c8e6c9 50%, #ffcce0 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+/* ============================================
+   INTRO ANIMATION
+   ============================================ */
+.intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff85b3, #90ee90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeOut 3s ease-in-out 2s forwards;
+}
+
+.intro-content {
+    text-align: center;
+    animation: bounceIn 1.5s ease-out;
+}
+
+.intro-title {
+    font-size: 4em;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.loading-animation {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.chubby-character {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 1s infinite;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.chubby-character::before {
+    content: "✿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    animation: rotate 2s linear infinite;
+}
+
+/* ============================================
+   TOP NAVIGATION MENU
+   ============================================ */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.top-nav a {
+    background: linear-gradient(135deg, #ff85b3, #ffb3d9);
+    border: 2px solid #ff69b4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 0.95em;
+    display: inline-block;
+}
+
+.top-nav a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+    background: linear-gradient(135deg, #ff69b4, #ff85b3);
+}
+
+.top-nav a.active {
+    background: linear-gradient(135deg, #90ee90, #c8e6c9);
+    border-color: #2e7d32;
+}
+
+/* ============================================
+   NEXT BUTTON (TOP RIGHT)
+   ============================================ */
+.next-btn-container {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 998;
+}
+
+.next-btn {
+    background: rgba(144, 238, 144, 0.95);
+    border: 3px solid #2e7d32;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2e7d32;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.next-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);
+    background: #90ee90;
+}
+
+/* ============================================
+   SCROLL ARROWS
+   ============================================ */
+.scroll-arrows {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.arrow-btn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #90ee90;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #2e7d32;
+}
+
+.arrow-btn:hover {
+    background: #90ee90;
+    transform: scale(1.1);
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 50px;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 1s ease-out 3s both;
+}
+
+.main-title {
+    font-size: 5em;
+    background: linear-gradient(45deg, #ff1493, #90ee90, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.page-title {
+    font-size: 4em;
+    background: linear-gradient(45deg, #ff1493, #90ee90, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* ============================================
+   LANDSCAPE DOODLE
+   ============================================ */
+.landscape-doodle {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    margin: 0 auto 40px;
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.doodle-content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffc0cb 0%, #ffb3d9 50%, #90ee90 100%);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.doodle-item {
+    font-size: 3em;
+    animation: float 3s ease-in-out infinite;
+}
+
+.doodle-item:nth-child(2) { animation-delay: 0.5s; }
+.doodle-item:nth-child(3) { animation-delay: 1s; }
+.doodle-item:nth-child(4) { animation-delay: 1.5s; }
+.doodle-item:nth-child(5) { animation-delay: 2s; }
+
+/* ============================================
+   INTRO TEXT & CONTENT BOXES
+   ============================================ */
+.intro-text, .content-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    color: #333;
+}
+
+.intro-text h2, .content-box h2 {
+    color: #ff1493;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.intro-text h3, .content-box h3 {
+    color: #ff69b4;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.5em;
+}
+
+.intro-text p, .content-box p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+.intro-text ul, .content-box ul {
+    list-style-position: inside;
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.intro-text li, .content-box li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* ============================================
+   TAROT CARDS - ALL 5 IN ONE ROW (SMALLER)
+   ============================================ */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+    animation: fadeInUp 1s ease-out 3.5s both;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 192, 203, 0.85));
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+    border-color: #ff69b4;
+}
+
+.card-icon {
+    font-size: 2.8em;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.card-title {
+    font-size: 1.1em;
+    color: #ff1493;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.card-desc {
+    color: #666;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+/* ============================================
+   CONTENT GRID (for pages)
+   ============================================ */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.content-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(255, 105, 180, 0.3);
+}
+
+.content-card h3 {
+    color: #ff1493;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.content-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1200px) {
+    .cards-section {
+        gap: 15px;
+    }
+    
+    .card {
+        width: 160px;
+    }
+}
+
+@media (max-width: 968px) {
+    .cards-section {
+        justify-content: center;
+    }
+    
+    .card {
+        width: 150px;
+        padding: 20px 15px;
+    }
+    
+    .card-icon {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title { font-size: 3em; }
+    .page-title { font-size: 2.5em; }
+    .intro-title { font-size: 2.5em; }
+    
+    .top-nav {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .top-nav a {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+    
+    .next-btn-container {
+        top: 60px;
+        right: 10px;
+    }
+    
+    .next-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 280px;
+        padding: 30px 25px;
+    }
+    
+    .card-icon {
+        font-size: 3.5em;
+    }
+    
+    .card-title {
+        font-size: 1.4em;
+    }
+    
+    .card-desc {
+        font-size: 1em;
+    }
+    
+    .doodle-item { font-size: 2em; }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-container {
+        padding: 100px 15px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title { font-size: 2em; }
+    .page-title { font-size: 2em; }
+    
+    .scroll-arrows {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .arrow-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2em;
+    }
+    
+    .top-nav a {
+        padding: 6px 12px;
+        font-size: 0.75em;
+    }
+/* ============================================
+   SECTION IMAGES (for Who Am I, Personality, Dreams)
+   ============================================ */
+.section-img {
+    width: 48%;
+    margin: 1%;
+    border-radius: 15px;
+    object-fit: cover;
+    display: inline-block;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-img:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(255,105,180,0.3);
+}
+.card-img {
+    width: 100%;
+    height: 150px; /* adjust as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+/* ============================================
+   SECTION MINI CARDS (like tarot style)
+   ============================================ */
+.section-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 180px;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.section-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+.section-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0;
+}
+
+.section-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(255,105,180,0.25);
+}
+/* ============================================
+   SOCIAL MEDIA MINI CARDS (like tarot style)
+   ============================================ */
+.social-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 160px;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.social-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+.social-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0;
+}
+
+.social-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(255,105,180,0.25);
+}
